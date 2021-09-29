@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<konferencia>
+	<cim>Tudományos konferencia</cim>
+	
+	<hallgatok>
+	
+		<hallgato>
+			<nev>Winch Eszter</nev>
+			<lakcim>Miskolc</lakcim>
+		</hallgato>
+		
+		<hallgato>
+			<nev>Mekk Elek</nev>
+			<lakcim>Sopron</lakcim>
+		</hallgato>
+		
+		<hallgato>
+			<nev>Tudom Ányos</nev>
+			<lakcim>Kaposvár</lakcim>
+		</hallgato>
+		
+	</hallgatok>
+	
+	<helyszin>III. eloado</helyszin>
+	
+	<eloado>
+		<nev> Okta Tóni</nev>
+		<adoszam>12345678</adoszam>
+		<lakcim>Debrecen</lakcim>
+	</eloado>
+	
+	<datum>2021. 09. 29.</datum>
+	
+</konferencia>

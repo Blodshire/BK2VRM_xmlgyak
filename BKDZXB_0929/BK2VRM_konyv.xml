@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mybooks SYSTEM "./BK2VRM_konyv.dtd">
+<mybooks>
+
+	<book id="asb1">
+		<title>Steve Jobs</title>
+		<year>2015</year>
+		<publisher>Little Brown</publisher>
+		<author>Walter Isaacson</author>
+		<author>Dylan Baker</author>
+	</book>
+	
+	<book id="asb2">
+		<title>Blood, Sweat,and Pixels</title>
+		<year>2017</year>
+		<publisher>HarperCollins Publishers</publisher>
+		<author>Jason Schreier</author>
+		<abstract>The Triumphant, Turbulent Stories Behind How Video Games Are Made</abstract>
+	</book>
+	
+	<book id="asb3">
+		<title>Automate the Boring Stuff with Python, 2nd Edition</title>
+		<year>2019</year>
+		<publisher>RANDOM HOUSE US</publisher>
+		<author>SWEIGART AL</author>
+	</book>
+	
+</mybooks>

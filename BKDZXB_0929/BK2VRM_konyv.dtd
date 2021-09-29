@@ -1,0 +1,8 @@
+<!ELEMENT mybooks (book*)>
+<!ELEMENT book (title, year, publisher, author+, abstract?)>
+<!ATTLIST book id ID #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT abstract (#PCDATA)>

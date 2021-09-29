@@ -1,0 +1,55 @@
+<!DOCUMENT HTML >
+
+<html lang="hu">
+	<head>
+		<title>MyUrlap</title>
+		<meta http-equiv="content-type" content="text/html"; charset="UTF-8">
+	</head>
+	<body style="background-color:blue;" >
+		<font style="font-size:14pt" >
+		<div align="center">
+		<form method ="POST" action="Feldolgozo.php" >
+			<fieldset  style="background-color:cyan; width:500px" align="center">
+			<table align="center">
+				<legend> Adatok:</legend>
+				
+				<tr>
+				<td><label for="nev">Név:</label></td>
+				<td><input type="text" name="nev" Value="" ></td> 
+				</tr>
+				
+				<tr>
+				<td><label for="jelszo">Jelszó:</label></td>
+				<td><input type="password" name="jelszo" Value="" ></td> 
+				</tr>
+				
+				<tr>
+				<td><label for="kor">Kor:</label></td>
+				<td><input type="number" name="kor" Value="" ></td> 
+				</tr>
+				
+				<tr>
+				<td><label for="magassag">Kisujjméret:</label></td>
+				<td><input type="number" name="magassag" Value="" ></td> 
+				</tr>
+				
+				<tr>
+				<td><label for="telefonszam">Alvázszám:</label></td>
+				<td><input type="number" name="telefonszam" Value="" ></td> 
+				</tr>
+				
+				<tr>
+				<td><label for="range">Szorgalom:</label></td>
+				<td><label for="range">0</label><input type="range" value="50" min="0" max="100" step="1" name="egyid" /><label for="range">100</label></td>
+				</tr>
+				
+				<tr>
+				<td><input type="submit" name="kuld" Value="Küld"></td>
+				</tr>
+				</table>
+			</fieldset>	
+		</form>	
+		</div>
+		</font>
+	</body>
+</html>
