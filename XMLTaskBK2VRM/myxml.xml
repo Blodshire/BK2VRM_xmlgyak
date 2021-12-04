@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schoolsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xmlschemaBK2VRM.xsd">
+
+	<schools>
+		<school S_ID="1">
+			<name>Academia</name>
+			<founded>1735</founded>
+			<eightschoolyears>1</eightschoolyears>
+		</school>
+
+		<school S_ID="2">
+			<name>Tancsics Mihaly Gimnazium</name>
+			<founded>1806</founded>
+			<eightschoolyears>1</eightschoolyears>
+		</school>
+
+		<school S_ID="3">
+			<name>Miskolci Iskola</name>
+			<founded>1949</founded>
+			<eightschoolyears>0</eightschoolyears>
+		</school>
+	</schools>
+	
+	<lessons>
+		<lesson O_ID="1">
+			<name>Matematika</name>
+			<length>45</length>
+		</lesson>
+
+		<lesson O_ID="2">
+			<name>XML Adatkezelés</name>
+			<length>100</length>
+		</lesson>
+
+		<lesson O_ID="3">
+			<name>Irodalom</name>
+			<length>60</length>
+		</lesson>
+
+		<lesson O_ID="4">
+			<name>Informatika</name>
+			<length>30</length>
+		</lesson>
+	</lessons>
+
+	<teachers>
+		<teacher T_ID="1" O_IDREF="1">
+			<name>Szigeti Tamás</name>
+			<degree>
+				<uni>Szegedi Tudományegyetem</uni>
+				<course>Matematika tanár</course>
+			</degree>
+		</teacher>
+
+		<teacher T_ID="2" O_IDREF="2">
+			<name>Bednarik László</name>
+			<degree>
+				<uni>Debreceni Egyetem</uni>
+				<course>Informatika tanár</course>
+			</degree>
+		</teacher>
+
+		<teacher T_ID="3" O_IDREF="3">
+			<name>Winch Eszter</name>
+			<degree>
+				<uni>Széchenyi Egyetem</uni>
+				<course>Általános filológia</course>
+			</degree>
+		</teacher>
+
+		<teacher T_ID="4" O_IDREF="4">
+			<name>Bitman</name>
+			<degree>
+				<uni>Miskolci Egyetem</uni>
+				<course>Informatika tanár</course>
+			</degree>
+		</teacher>
+
+		<teacher T_ID="5" O_IDREF="1">
+			<name>Péch Antal</name>
+			<degree>
+				<uni>Selmeci Akadémia</uni>
+				<course>Mérnök</course>
+			</degree>
+		</teacher>
+	</teachers>
+
+	<jobdetails>
+		<detail S_IDREF="2" T_IDREF="1">
+			<startyear>2000</startyear>
+			<position>Mesteroktató</position>
+		</detail>
+
+		<detail S_IDREF="1" T_IDREF="5">
+			<startyear>1862</startyear>
+			<position>Professzor</position>
+		</detail>
+
+		<detail S_IDREF="3" T_IDREF="2">
+			<startyear>1997</startyear>
+			<position>Mesteroktató</position>
+		</detail>
+
+		<detail S_IDREF="3" T_IDREF="3">
+			<startyear>2020</startyear>
+			<position>Tanársegéd</position>
+		</detail>
+		
+		<detail S_IDREF="3" T_IDREF="4">
+			<startyear>1995</startyear>
+			<position>Mesteroktató</position>
+		</detail>
+	</jobdetails>
+
+	<students>
+		<student D_ID="1" S_IDREF="1" T_IDREF="5">
+			<name>Sirankó Boldizsár</name>
+			<birthdate>2000-12-23</birthdate>
+			<woncompetition>Dombó Pál tanulmányi verseny</woncompetition>
+			<woncompetition>Mágocsi tanulmányi verseny</woncompetition>
+			<woncompetition>Nemes Tihamér alkalmazói verseny</woncompetition>
+		</student>
+
+		<student D_ID="2" S_IDREF="2" T_IDREF="1">
+			<name>Tóth Tóbiás</name>
+			<birthdate>2001-05-04</birthdate>
+			<woncompetition>Nemes Tihamér alkalmazói verseny</woncompetition>
+			<woncompetition>Dusza Árpád programozói verseny</woncompetition>
+			
+		</student>
+
+		<student D_ID="3" S_IDREF="3" T_IDREF="2">
+			<name>Kovács Bence</name>
+			<birthdate>1999-05-24</birthdate>
+			<woncompetition>Rubikon történelmi verseny</woncompetition>
+		</student>
+
+		<student D_ID="4" S_IDREF="3" T_IDREF="2">
+			<name>Dékány Péter</name>
+			<birthdate>1998-11-11</birthdate>
+		</student>
+		
+		<student D_ID="5" S_IDREF="1" T_IDREF="5">
+			<name>Kovács Antal</name>
+			<birthdate>1999-02-24</birthdate>
+			<woncompetition>Legjobb Firma tehetségkutató verseny</woncompetition>
+		</student>
+	</students>
+
+	<credits>
+		<credit D_IDREF="1" O_IDREF="1"/>
+		<credit D_IDREF="2" O_IDREF="1"/>
+		<credit D_IDREF="3" O_IDREF="2"/>
+		<credit D_IDREF="3" O_IDREF="3"/>
+		<credit D_IDREF="4" O_IDREF="2"/>
+		<credit D_IDREF="4" O_IDREF="3"/>
+		<credit D_IDREF="4" O_IDREF="4"/>
+		<credit D_IDREF="5" O_IDREF="1"/>
+	</credits>
+
+	
+</schoolsystem>
+ 

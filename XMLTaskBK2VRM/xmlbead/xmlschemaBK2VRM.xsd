@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!--Egyszerű elemek-->
+	<xs:element name="name" type="xs:string"/>
+	<xs:element name="woncompetition" type="xs:string"/>
+	<xs:element name="eightschoolyears" type="xs:boolean"/>
+	<xs:element name="founded" type="xs:integer"/>
+	<xs:element name="length" type="xs:integer"/>
+	<xs:element name="uni" type="xs:string"/>
+	<xs:element name="course" type="xs:string"/>
+	<xs:element name="startyear" type="xs:integer"/>
+	<xs:element name="position" type="xs:string"/>
+	<xs:element name="birthdate" type="xs:date"/>
+	
+	<!--Attribútumok-->
+	<xs:attribute name="D_ID" type="xs:integer"/>
+	<xs:attribute name="D_IDREF" type="xs:integer"/>
+	<xs:attribute name="S_ID" type="xs:integer"/>
+	<xs:attribute name="S_IDREF" type="xs:integer"/>
+	<xs:attribute name="T_ID" type="xs:integer"/>
+	<xs:attribute name="T_IDREF" type="xs:integer"/>
+	<xs:attribute name="O_ID" type="xs:integer"/>
+	<xs:attribute name="O_IDREF" type="xs:integer"/>
+
+	<!--Komplex elemek: alapok-->
+	
+	<xs:complexType name="degreetype">
+		<xs:sequence>
+			<xs:element ref="uni"/>
+			<xs:element ref="course"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="schooltype">
+		<xs:sequence>
+			<xs:element ref="name"/>
+			<xs:element ref="founded"/>
+			<xs:element ref="eightschoolyears"/>
+		</xs:sequence>
+		<xs:attribute ref="S_ID" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="lessontype">
+		<xs:sequence>
+			<xs:element ref="name"/>
+			<xs:element ref="length"/>
+		</xs:sequence>
+		<xs:attribute ref="O_ID" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="detailtype">
+		<xs:sequence>
+			<xs:element ref="startyear"/>
+			<xs:element ref="position"/>
+		</xs:sequence>
+		<xs:attribute ref="T_IDREF" use="required"/>
+		<xs:attribute ref="S_IDREF" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="teachertype">
+		<xs:sequence>
+			<xs:element ref="name"/>
+			<xs:element name="degree" type="degreetype" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref="T_ID" use="required"/>
+		<xs:attribute ref="O_IDREF" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="studenttype">
+		<xs:sequence>
+			<xs:element ref="name"/>
+			<xs:element ref="birthdate"/>
+			<xs:element ref="woncompetition" maxOccurs="unbounded" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute ref="D_ID" use="required"/>
+		<xs:attribute ref="S_IDREF" use="required"/>
+		<xs:attribute ref="T_IDREF" use="required"/>
+	</xs:complexType>
+		
+	<xs:complexType name="credittype">
+		<xs:attribute ref="D_IDREF" use="required"/>
+		<xs:attribute ref="O_IDREF" use="required"/>
+	</xs:complexType>
+	
+	<!--Komplex elemek: gyűjtők-->
+	<xs:complexType name="lessonstype">
+		<xs:sequence>
+            		<xs:element name="lesson" type="lessontype" maxOccurs="unbounded"/>
+        	</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="schoolstype">
+		<xs:sequence>
+            		<xs:element name="school" type="schooltype" maxOccurs="unbounded"/>
+        	</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="teacherstype">
+		<xs:sequence>
+            		<xs:element name="teacher" type="teachertype" maxOccurs="unbounded"/>
+        	</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="studentstype">
+		<xs:sequence>
+            		<xs:element name="student" type="studenttype" maxOccurs="unbounded"/>
+        	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="detailstype">
+		<xs:sequence>
+            		<xs:element name="detail" type="detailtype" maxOccurs="unbounded"/>
+        	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="creditstype">
+		<xs:sequence>
+            		<xs:element name="credit" type="credittype" maxOccurs="unbounded"/>
+        	</xs:sequence>
+	</xs:complexType>
+			
+	<!--Kész séma-->
+	
+	<xs:element name="schoolsystem">
+		<xs:complexType>
+			<xs:sequence>
+            			<xs:element name="schools" type="schoolstype"/>
+				<xs:element name="lessons" type="lessonstype"/>
+				<xs:element name="teachers" type="teacherstype"/>
+				<xs:element name="jobdetails" type="detailstype"/>
+				<xs:element name="students" type="studentstype"/>
+				<xs:element name="credits" type="creditstype"/>
+        		</xs:sequence>
+		</xs:complexType>
+
+	<!--Elsődleges kulcsok-->
+		<xs:key name="T_ID">
+			<xs:selector xpath="teachers/teacher"/>
+            		<xs:field xpath="@T_ID"/>
+		</xs:key>
+
+		<xs:key name="S_ID">
+			<xs:selector xpath="schools/school"/>
+            		<xs:field xpath="@S_ID"/>
+		</xs:key>
+
+		<xs:key name="O_ID">
+			<xs:selector xpath="lessons/lesson"/>
+            		<xs:field xpath="@O_ID"/>
+		</xs:key>
+
+		<xs:key name="D_ID">
+			<xs:selector xpath="students/student"/>
+            		<xs:field xpath="@D_ID"/>
+		</xs:key>
+
+	<!--Idegen kulcsok-->
+		<xs:keyref name="TeacherFK1" refer="T_ID">
+			<xs:selector xpath="students/student"/>
+            		<xs:field xpath="@T_IDREF"/>
+		</xs:keyref>
+		<xs:keyref name="TeacherFK2" refer="T_ID">
+			<xs:selector xpath="jobdetails/jobdetail"/>
+            		<xs:field xpath="@T_IDREF"/>
+		</xs:keyref>
+
+		<xs:keyref name="SchoolFK1" refer="S_ID">
+			<xs:selector xpath="students/student"/>
+            		<xs:field xpath="@S_IDREF"/>
+		</xs:keyref>
+		<xs:keyref name="SchoolFK2" refer="S_ID">
+			<xs:selector xpath="details/detail"/>
+            		<xs:field xpath="@S_IDREF"/>
+		</xs:keyref>
+
+		<xs:keyref name="LessonFK1" refer="O_ID">
+			<xs:selector xpath="teachers/teacher"/>
+            		<xs:field xpath="@O_IDREF"/>
+		</xs:keyref>
+		<xs:keyref name="LessonFK2" refer="O_ID">
+			<xs:selector xpath="credits/credit"/>
+            		<xs:field xpath="@O_IDREF"/>
+		</xs:keyref>
+
+		<xs:keyref name="StudentFK1" refer="D_ID">
+			<xs:selector xpath="students/student"/>
+            		<xs:field xpath="@D_IDREF"/>
+		</xs:keyref>
+	</xs:element>
+</xs:schema>
