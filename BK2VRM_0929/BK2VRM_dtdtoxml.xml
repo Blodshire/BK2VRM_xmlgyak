@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE modell SYSTEM "TH_ertodtd.dtd">
+
+
+<modell>
+	<A Aa="asd1">
+		<Ab>
+			<Abx></Abx>
+			<Aby></Aby>
+		</Ab>
+		<Ac>
+			<Acd></Acd>
+			<Ace></Ace>
+		</Ac>
+	</A>
+	<B Ba="asd2">
+		<Bb>
+			<Bbx></Bbx>
+			<Bby></Bby>
+		</Bb>
+	</B>
+	<C Ca="asd3">
+		<Cb></Cb>
+	</C>
+	<A_B A_B_a="asd1" A_B_b="asd2">
+		<A_Bc></A_Bc>
+	</A_B>
+</modell>

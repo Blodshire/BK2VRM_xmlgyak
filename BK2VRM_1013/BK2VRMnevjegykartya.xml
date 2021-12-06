@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nevjegykartyak xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/D:/xmlrepo/BK2VRM_1013/BK2VRM_nevjegykartya.xsd">
+    <nevjegykartya>
+        <nev>Nádházy Gergely</nev>
+        <ceg>
+            <nev>Gépész Valéta Bizottság</nev>
+            <cim>
+                <irszam>3515</irszam>
+                <varos>Miskolc - Egyetemváros</varos>
+                <utca>Eper utca</utca>
+                <hazszam>E/2</hazszam>
+            </cim>
+            <telefonszam>36994567723</telefonszam>
+            <weblap>geikvaleta.hu</weblap>
+        </ceg>
+        <beosztas>Pénztáros</beosztas>
+        <telefonszam></telefonszam>
+        <email>nadigeri@fictionmail.com</email>
+    </nevjegykartya>
+    <nevjegykartya>
+        <nev>Timkó Attila</nev>
+        <ceg>
+            <nev>Gépész Valéta Bizottság</nev>
+            <cim>
+                <irszam>3515</irszam>
+                <varos>Miskolc - Egyetemváros</varos>
+                <utca>Eper utca</utca>
+                <hazszam>E/2</hazszam>
+            </cim>
+            <telefonszam>36994567723</telefonszam>
+            <weblap>geikvaleta.hu</weblap>
+        </ceg>
+        <beosztas>Elnök</beosztas>
+        <telefonszam>36306667823</telefonszam>
+        <email>timkeszatesz@fictionmail.com</email>
+    </nevjegykartya>
+</nevjegykartyak>

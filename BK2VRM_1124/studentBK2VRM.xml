@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="studentBK2VRM.xsl"?>
+
+<class>
+        <student id="01">
+                <vezeteknev>Sirankó</vezeteknev>
+                <keresztnev>Boldizsár</keresztnev>
+                <becenev>Zsoldibár</becenev>
+                <kor>20</kor>
+                <fizetes>0</fizetes>
+        </student>
+        <student id="02">
+                <vezeteknev>Rőthi</vezeteknev>
+                <keresztnev>János</keresztnev>
+                <becenev>Jani</becenev>
+                <kor>22</kor>
+                <fizetes></fizetes>
+        </student>
+        <student id="03">
+                <vezeteknev>Berki</vezeteknev>
+                <keresztnev>Viktor</keresztnev>
+                <becenev>csicska fiam</becenev>
+                <kor>18</kor>
+                <fizetes>15000</fizetes>
+        </student>
+</class>

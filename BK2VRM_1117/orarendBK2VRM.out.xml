@@ -1,0 +1,97 @@
+<html>
+    <body>
+        <h2>Sirankó Boldizsár órarend – 2021/22. I. félév.</h2>
+        <table border="1">
+            <tr bgcolor="#c8f542">
+                <th>Nap</th>
+                <th>Kezdés</th>
+                <th>Vége</th>
+                <th>Tárgy</th>
+                <th>Típus</th>
+                <th>Helyszín</th>
+                <th>Oktató</th>
+                <th>Szak</th>
+            </tr>
+            <tr>
+                <td>Hétfő</td>
+                <td>8</td>
+                <td>12</td>
+                <td>Algoritmusok és vizsgálatuk</td>
+                <td>Elmélet és gyakorlat</td>
+                <td>XII A3 III.em.313</td>
+                <td>Dr. Házy Attlia</td>
+                <td>Programtervező</td>
+            </tr>
+            <tr>
+                <td>Hétfő</td>
+                <td>12</td>
+                <td>14</td>
+                <td>Web technológiák</td>
+                <td>Elmélet</td>
+                <td>XXX A1 III.em. 305</td>
+                <td>Agárdi Anita</td>
+                <td>Programtervező</td>
+            </tr>
+            <tr>
+                <td>Hétfő</td>
+                <td>14</td>
+                <td>17</td>
+                <td>Mesterséges intelligencia</td>
+                <td>Elmélet</td>
+                <td>XXXII A1 magasfsz.</td>
+                <td>Dr. Dudás László</td>
+                <td>Programtervező</td>
+            </tr>
+            <tr>
+                <td>Hétfő</td>
+                <td>17</td>
+                <td>19</td>
+                <td>Web technológiák</td>
+                <td>Gyakorlat</td>
+                <td>In/101</td>
+                <td>Kunné Tamás Judit</td>
+                <td>Programtervező</td>
+            </tr>
+            <tr>
+                <td>Kedd</td>
+                <td>12</td>
+                <td>14</td>
+                <td>Adatkezelés XML-ben</td>
+                <td>Elmélet</td>
+                <td>I A2 fsz.</td>
+                <td>Dr.Bednarik László</td>
+                <td>Programtervező</td>
+            </tr>
+            <tr>
+                <td>Szerda</td>
+                <td>9</td>
+                <td>10</td>
+                <td>Mesterséges intelligencia</td>
+                <td>Gyakorlat</td>
+                <td>In/15</td>
+                <td>Dr.Dudás László</td>
+                <td>Programtervező</td>
+            </tr>
+            <tr>
+                <td>Szerda</td>
+                <td>10</td>
+                <td>12</td>
+                <td>Adatkezelés XML-ben</td>
+                <td>Gyakorlat</td>
+                <td>In/202.</td>
+                <td>Dr.Bednarik László</td>
+                <td>Programtervező</td>
+            </tr>
+            <tr>
+                <td>Szerda</td>
+                <td>16</td>
+                <td>20</td>
+                <td>Vállalati információs rendszerek</td>
+                <td>Elmélet és gyakorlat</td>
+                <td>In/103.</td>
+                <td>Dr.Sasvári Péter</td>
+                <td>Programtervező</td>
+            </tr>
+        </table>
+    </body>
+</html>

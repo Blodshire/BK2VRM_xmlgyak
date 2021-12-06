@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<users xmlns="mydomBK2VRM">
+    <user id="1">
+        <firstname>Winch</firstname>
+        <lastname>Eszter</lastname>
+        <profession>lead dev</profession>
+    </user>
+    <user id="2">
+        <firstname>Mekk</firstname>
+        <lastname>Elek</lastname>
+        <profession>junior dev</profession>
+    </user>
+    <user id="3">
+        <firstname>Tiv</firstname>
+        <lastname>Tivy</lastname>
+        <profession>devops engineer</profession>
+    </user>
+</users>

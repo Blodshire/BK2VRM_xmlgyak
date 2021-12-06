@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+		
+<element name="mybooks">
+	<complexType>
+		<sequence>
+			<element name="book" maxOccurs="unbounded">
+				<complexType>
+					<sequence>
+						<element name="title" type="string" />
+						<element name="year" type="unsignedShort" />
+						<element name="publisher" type="string" />
+						<element name="author" type="string" maxOccurs="unbounded" />
+						<element name="abstract" type="string" minOccurs="0" />
+					</sequence>
+					<attribute name="id" type="string" use="required"/>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+</schema>
